@@ -1,0 +1,10 @@
+.contact__list{
+	align-items: center;
+	margin: 0 auto;
+	width: 600px;
+}
+
+.contact__item{
+display: flex;
+justify-content: space-between;
+}
