@@ -1,5 +1,7 @@
-import  {Component} from "react";
+import  React, {Component} from "react";
 import ContactList from "./ContactList/ContactList";
+import ContactEditor from "./ContactEditor/ContactEditor";
+import {nanoid} from "nanoid"
 
 
 class App extends Component {
@@ -11,6 +13,20 @@ state = {
     {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
   ],
 };
+
+addContact = ({name, number}) => {
+  
+
+  const contact = {
+    id: nanoid(),
+    name,
+    number
+  }
+
+  this.setState(pervState => ({
+    contacts: [contact, ...pervState.contacts],
+  }))
+}
 
 
 handleDeleteContact = (contactId) => {
@@ -26,7 +42,7 @@ const {contacts} =this.state;
 
   return (
     <div className="container">
-    
+    <ContactEditor onSubmit={this.addContact}/>
     <h2 className="title">Contacts</h2>
     <ContactList contacts={contacts} onDeleteContact={this.handleDeleteContact}/>
     </div>
