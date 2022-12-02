@@ -13,6 +13,13 @@ state = {
 };
 
 
+handleDeleteContact = (contactId) => {
+this.setState(prevState => ({
+  contacts: prevState.contacts.filter(contact => contact.id !== contactId),
+}))
+};
+
+
 render() {
 const {contacts} =this.state;
 
@@ -21,7 +28,7 @@ const {contacts} =this.state;
     <div className="container">
     
     <h2 className="title">Contacts</h2>
-    <ContactList contacts={contacts}/>
+    <ContactList contacts={contacts} onDeleteContact={this.handleDeleteContact}/>
     </div>
   )
 

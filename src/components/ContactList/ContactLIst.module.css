@@ -8,3 +8,16 @@
 display: flex;
 justify-content: space-between;
 }
+
+.contact__item:not(:last-child){
+	margin-bottom: 5px;
+}
+
+.contact__button{
+	border: none;
+	width: 65px;
+	height: 25px;
+	background-color: black;
+	color: crimson;
+	border-radius: 5px;
+}
