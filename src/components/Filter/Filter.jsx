@@ -1,9 +1,15 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
 const Filter = ({value, onChange}) => {
 return (
-	<label>
-      Fynd contacts by name <input type="text" value={value} onChange={onChange}/>
+	<label >
+      Fynd contacts by name 
+		<input 
+		type="text" 
+		value={value} 
+		onChange={onChange}
+		
+		/>
    </label>
 )
 }

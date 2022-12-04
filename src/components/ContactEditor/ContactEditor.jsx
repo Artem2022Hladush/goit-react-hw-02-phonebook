@@ -1,6 +1,6 @@
 import  React, {Component} from "react";
 import PropTypes from "prop-types"
-// import css from "../ContactEditor/ContactEditor.module.css"
+import css from "../ContactEditor/ContactEditor.module.css"
 
 class ContactEditor extends Component {
 	static propTypes={
@@ -10,7 +10,9 @@ class ContactEditor extends Component {
 state = {
 	name: " ",
 	number: " "
-}
+};
+
+
 
 handleChange = e => {
 const {name, value} = e.currentTarget;
@@ -27,7 +29,8 @@ handleSubmit = e => {
 
 render() {
 	return (
-		<form onSubmit={this.handleSubmit}>
+		<form className={css.form} onSubmit={this.handleSubmit}>
+			<label>
 			<input
 				type="text" 
 				name="name"
@@ -36,7 +39,9 @@ render() {
 				required
 				onChange={this.handleChange}
 				value={this.state.name}
+				id={this.nameId}
 />
+			</label>
 			<input
 				type="tel"
 				name="number"

@@ -55,6 +55,7 @@ const { filter} =this.state;
 
   return (
     <div className="container">
+      <h1 className="title">Phonebook</h1>
     <ContactEditor onSubmit={this.addContact}/>
     <Filter value={filter} onChange={this.changeFilter}/>
     <h2 className="title">Contacts</h2>
