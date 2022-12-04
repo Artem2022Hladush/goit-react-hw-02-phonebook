@@ -30,7 +30,8 @@ handleSubmit = e => {
 render() {
 	return (
 		<form className={css.form} onSubmit={this.handleSubmit}>
-			<label className={css.label} htmlFor="name"> Name
+			<div>
+			<label className={css.label} htmlFor="name">Name</label >
 			<input
 				type="text" 
 				name="name"
@@ -41,8 +42,9 @@ render() {
 				value={this.state.name}
 				id="name"
 />
-			</label >
-			<label className={css.label} htmlFor="number"> Number
+			</div>
+			<div>
+			<label className={css.label} htmlFor="number">Number</label>
 			<input
 				type="tel"
 				name="number"
@@ -53,8 +55,7 @@ render() {
 				onChange={this.handleChange}
 				value={this.state.number}
 			/>
-			</label>
-		
+			</div>
 <button type="submit">Add Contact</button>
 		</form>
 	)
