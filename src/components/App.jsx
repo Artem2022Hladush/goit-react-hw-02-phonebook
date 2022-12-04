@@ -40,22 +40,27 @@ this.setState(prevState => ({
 
 changeFilter = e => {
   this.setState({filter: e.currentTarget.value})
+};
+
+getFilterContact =()=> {
+const {filter, contacts} = this.state;
+
+  const normalizedFilter = filter.toLowerCase();
+  return contacts.filter(contact => contact.name.toLowerCase().includes(normalizedFilter));
 }
 
 
 render() {
-const {contacts, filter} =this.state;
-
+const { filter} =this.state;
 
   return (
     <div className="container">
     <ContactEditor onSubmit={this.addContact}/>
     <Filter value={filter} onChange={this.changeFilter}/>
     <h2 className="title">Contacts</h2>
-    <ContactList contacts={contacts} onDeleteContact={this.handleDeleteContact}/>
+    <ContactList contacts={this.getFilterContact()} onDeleteContact={this.handleDeleteContact}/>
     </div>
   )
-
 }
 };
 
