@@ -2,3 +2,12 @@
 	display: flex;
 	justify-content: space-around;
 }
+
+.label{
+	display: block;
+   margin-left: 50%;
+   transform: translateX(-40%);
+   margin-bottom: 10px;
+   font-size: 20px;
+   color: darkorchid;
+}
