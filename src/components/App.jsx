@@ -1,6 +1,7 @@
 import  React, {Component} from "react";
 import ContactList from "./ContactList/ContactList";
 import ContactEditor from "./ContactEditor/ContactEditor";
+import Filter from "./Filter/Filter";
 import {nanoid} from "nanoid"
 
 
@@ -12,6 +13,8 @@ state = {
     {id: 'id-3', name: 'Eden Clements', number: '645-17-79'},
     {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
   ],
+
+  filter: " ",
 };
 
 addContact = ({name, number}) => {
@@ -35,14 +38,19 @@ this.setState(prevState => ({
 }))
 };
 
+changeFilter = e => {
+  this.setState({filter: e.currentTarget.value})
+}
+
 
 render() {
-const {contacts} =this.state;
+const {contacts, filter} =this.state;
 
 
   return (
     <div className="container">
     <ContactEditor onSubmit={this.addContact}/>
+    <Filter value={filter} onChange={this.changeFilter}/>
     <h2 className="title">Contacts</h2>
     <ContactList contacts={contacts} onDeleteContact={this.handleDeleteContact}/>
     </div>
