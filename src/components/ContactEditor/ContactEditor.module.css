@@ -11,3 +11,34 @@
    font-size: 20px;
    color: darkorchid;
 }
+
+.input{
+	border: none;
+	background: none;
+	border-bottom:4px solid darkviolet ;
+}
+
+.form__button {
+	display: inline-flex;
+	margin: 10px;
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	line-height: 20px;
+	padding: 12px 30px;
+	color: skyblue;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: 'Ubuntu', Тahoma, sans-serif;
+	background: darkviolet;
+	cursor: pointer;
+	border: 2px solid fuchsia;
+}
+
+.form__button:hover,
+.form__button:active,
+.form__button:focus {
+   color: greenyellow;
+	border: 2px solid coral;
+	background: dodgerblue;
+}

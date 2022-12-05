@@ -33,6 +33,7 @@ render() {
 			<div>
 			<label className={css.label} htmlFor="name">Name</label >
 			<input
+			className={css.input}
 				type="text" 
 				name="name"
 				pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -46,6 +47,7 @@ render() {
 			<div>
 			<label className={css.label} htmlFor="number">Number</label>
 			<input
+			className={css.input}
 				type="tel"
 				name="number"
 				pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -56,7 +58,7 @@ render() {
 				value={this.state.number}
 			/>
 			</div>
-<button type="submit">Add Contact</button>
+<button className={css.form__button} type="submit">Add Contact</button>
 		</form>
 	)
 }

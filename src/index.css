@@ -46,4 +46,6 @@ ul {
 .title {
   text-align: center;
   font-size: 30px;
+  margin-bottom: 45px;
+  color: greenyellow;
 }
