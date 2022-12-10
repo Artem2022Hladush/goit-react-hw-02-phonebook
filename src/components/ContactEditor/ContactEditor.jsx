@@ -8,8 +8,8 @@ class ContactEditor extends Component {
 }
 
 state = {
-	name: " ",
-	number: " "
+	name: "",
+	number: ""
 };
 
 
@@ -24,7 +24,7 @@ handleSubmit = e => {
 
 	this.props.onSubmit(this.state)
 
-	this.setState({name: " ", number: " "})
+	this.setState({name: "", number: ""})
 }
 
 render() {
