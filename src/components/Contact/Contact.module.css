@@ -1,3 +1,11 @@
+.contact{
+	display: flex;
+	width: 600px;
+	justify-content: space-between;
+}
+
+
+
 .contact__button{
 	border: 2px solid navy;
 	width: 65px;
@@ -14,3 +22,13 @@
 	background-color: darkred;
 	border: 2px solid purple;
 }
+
+.name{
+	font-size: 20px;
+	color: purple;
+	}
+.number{
+	margin-left: 10px;
+	font-size: 20px;
+	color: purple;
+	}
