@@ -14,7 +14,7 @@ state = {
     {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
   ],
 
-  filter: " ",
+  filter: "",
 };
 
 addContact = ({name, number}) => {
