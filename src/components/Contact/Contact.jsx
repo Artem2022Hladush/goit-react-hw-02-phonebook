@@ -2,12 +2,12 @@ import React from "react"
 import css from "../Contact/Contact.module.css"
 import PropTypes from "prop-types"
 
-const Contact = ({name, number, onDeleteContact}) => (
-		<div className={css.contact}>
-			<p className={css.name}>{name} :</p>
-			<p className={css.number}>{number}</p>
-			<button className={css.contact__button} type="button" onClick={onDeleteContact}>Delete</button>
-		</div>
+const Contact = ({name, number, id, onDelete}) => (
+	<li className={css.contact}>
+	<p className={css.name}>{name}: </p>
+	<p className={css.number}>{number}</p>
+	<button className={css.contact__button} type="button" onClick={()=>onDelete(id)}>Delete</button>
+</li>
 );
 
 Contact.propTypes = {

@@ -3,6 +3,7 @@ import ContactList from "./ContactList/ContactList";
 import ContactEditor from "./ContactEditor/ContactEditor";
 import Filter from "./Filter/Filter";
 import {nanoid} from "nanoid"
+import Notiflix from 'notiflix';
 
 
 class App extends Component {
@@ -18,7 +19,11 @@ state = {
 };
 
 addContact = ({name, number}) => {
-  
+  if(this.state.contacts.some(contact=>contact.name.toLowerCase()===name.toLowerCase() ))
+  {
+    Notiflix.Notify.warning(`${name} is already in contacts`);
+    return ;
+  }
 
   const contact = {
     id: nanoid(),

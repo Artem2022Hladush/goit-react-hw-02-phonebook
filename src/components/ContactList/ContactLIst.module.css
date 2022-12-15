@@ -5,12 +5,5 @@
 	justify-content: space-between;
 }
 
-.contact__item{
-display: flex;
-justify-content: space-between;
-}
 
-.contact__item:not(:last-child){
-	margin-bottom: 5px;
-}
 
